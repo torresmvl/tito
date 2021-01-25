@@ -1,7 +1,8 @@
 FROM alpine:3.13 AS baseImage
 
 RUN apk add --no-cache --virtual .run-deps \
-    tini 
+    tini && \
+    adduser -D tito
 
 ENTRYPOINT [ "/sbin/tini", "--" ]    
 
