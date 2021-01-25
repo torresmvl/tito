@@ -6,7 +6,7 @@
 
 ### Usage
 
-`tito` uses **GitHub's Container Registry** that can be pulled:
+`tito` uses **GitHub's Container Registry** and can be pulled:
 
 ```
 docker pull ghcr.io/torresmvl/tito:tag
