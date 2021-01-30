@@ -4,10 +4,9 @@ RUN apk add --no-cache --virtual .run-deps \
     tini && \
     adduser -D tito
 
-ENTRYPOINT [ "/sbin/tini", "--" ]    
-
 FROM scratch AS tito
 
 COPY --from=baseImage / /
 
+ENTRYPOINT [ "/sbin/tini", "--" ]
 CMD [ "/bin/ash" ]
